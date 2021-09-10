@@ -1,0 +1,408 @@
+<!--indica que iniciamos o html!-->
+<html>
+
+<!--serve para inserir links, chamar API's, conseguimos adicionar bibliotecas ao nosso código, e também inserir arquivos de configuração, exemplo: CSS-->
+<head>
+	<!--arruma a acentuação e caracteres!-->
+    <meta charset="utf-8">
+
+	<!--serve para baixar qualquer fonte depois de colocada nâo a necessidade de outra-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <!--link que baixa a fonte escolhida -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@1,300&display=swap" rel="stylesheet">   
+
+   
+</head>
+
+<!--trabalha com a aparencia do nosso site-->
+<style>
+
+	/*serve para mudar a cor de fundo do site*/
+    body{
+       	/*para não repetir a imagem*/
+        background:no-repeat; 
+        /*imagem do fundo da pagina*/   
+        background-image: url(fundo.jpg); 
+
+        /*o tamanho da imagem*/
+        /*largura*/
+        width: 100%;
+        /*altura*/
+        height: 100%;
+
+      
+    }
+
+
+
+
+    button {
+        
+        /*cor do fundo do botão*/
+        background-color: #161671;
+        /*bordas do botão*/
+        border: none; ;
+        /*cursor do mouse*/
+        cursor: pointer;
+        /* sombra do botão no caso da parte de baixo*/
+        box-shadow:0 3px 2px #04043A;
+        /*largura*/
+        width: 90px;
+        /*altura*/
+        height: 25px;
+    }
+
+
+    .texto{
+
+        /*centraliza o texto*/
+        text-align: center;
+        
+        /*fonte escolhida*/
+        font-family: 'Work Sans', sans-serif;
+
+        /*tamanho da letra*/
+        font-size: 20px;
+
+        /*cor da letra*/
+        color: #FFFFFF ;
+
+    }
+
+        
+    /*cria animação para o objeto definido*/    
+    @keyframes teste1 {
+
+    	/* 'transform" é capaz de mover um elemento de acordo com as posições colocadas*/
+        100% {
+        	/* '360deg' significa que os graus */
+            transform: rotate(360deg);
+        }
+    }  
+
+
+    .teste1{
+        /*permitem que você altere os valores das propriedades longo de um determinado período */
+        transition: .2s;
+     }
+
+
+    /*hover ocorre ao passar o mouse em cima*/
+    .teste1:hover {
+        /*nome da classe que sera realizada a animação*/
+        animation-name: teste1;
+        /*delei até que a animação comece*/
+        animation-delay: 0.5s;
+        /*dução da anumação*/
+        animation-duration: 1s;
+        /*significa que a animação vai ocrrer de maneira linear, ou seja, vai se na mesma velocidad do inicio ao fim*/
+        animation-timing-function: linear;
+        /*é a quantidade que ocorrera a animação*/
+        animation-iteration-count: 1
+    }
+
+
+    /*função ao clicar com o mouse em cima*/
+    .teste1:active{
+        /*cor ao clicar com mouse em cima do botão*/
+        background-color: #079200;
+        /*sombra do botão*/
+        box-shadow: none;
+        /*ajusta a posição diferente de  sua anterior*/
+        position: relative;
+        /*posiçãpo de cima do botão*/
+        /*ao clicar move para baixo o botão*/
+        top: 5px ;
+        /*delei até que a animação comece*/
+        transition-delay: -5s;
+    }
+
+
+   	/*cria animação para o objeto definido*/       
+    @keyframes teste2 {
+
+    	/* 'transform" é capaz de mover um elemento de acordo com as posições colocadas*/
+        0% {
+            transform: rotate(0);
+        }
+        /* '15deg' significa que os graus */
+        25% {
+            transform: rotate(15deg);
+        }
+        50% {
+            transform: rotate(0);
+        }
+        75% {
+            transform: rotate(-15deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }   
+
+
+    .teste2{
+        /*permitem que você altere os valores das propriedades longo de um determinado período*/
+        transition: .2s;
+     }
+
+
+     /*hover ocorre ao passar o mouse em cima*/
+    .teste2:hover {
+        /*nome da classe que sera realizada a animação*/
+        animation-name: teste2;
+        /*delei até que a animação comece*/
+        animation-delay: 0.5s;
+        /*dução da anumação*/
+        animation-duration: 1s;
+        /*significa que a animação vai ocrrer de maneira linear, ou seja, vai se na mesma velocidad do inicio ao fim*/
+        animation-timing-function: linear;
+        /*é a quantidade que ocorrera a animação*/
+        animation-iteration-count: 1
+
+    }
+
+
+   	.teste2:active{
+        /*cor ao clicar com mouse em cima do botão*/
+        background-color: #079200;
+        /*sombra do botão*/
+        box-shadow: none;
+        /*ajusta a posição diferente de  sua anterior*/
+        position: relative;
+        /*posiçãpo de cima do botão*/
+        /*ao clicar move para baixo o botão*/
+        top: 5px ;
+        /*delei até que a animação comece*/
+        transition-delay: -5s;
+    }
+  
+
+    /*cria animação para o objeto definido*/     
+    @keyframes teste3 {
+
+    	/* 'transform" é capaz de mover um elemento de acordo com as posições colocadas*/
+        0% {
+            transform: rotateX(0);
+        }
+
+        /* '180deg' significa que os graus */
+        50% {
+            transform: rotateX(180deg);
+        }
+        
+        100% {
+            transform: rotateX(0);
+        }
+    }   
+
+    .teste3{
+        /*permitem que você altere os valores das propriedades longo de um determinado período*/
+        transition: .2s;
+     }
+
+
+    /*hover ocorre ao passar o mouse em cima*/
+    .teste3:hover {
+        /*nome da classe que sera realizada a animação*/
+        animation-name: teste3;
+        /*delei até que a animação comece*/
+        animation-delay: 0.5s;
+        /*dução da anumação*/
+        animation-duration: 1s;
+        /*significa que a animação vai ocrrer de maneira linear, ou seja, vai se na mesma velocidad do inicio ao fim*/
+        animation-timing-function: linear;
+        /*é a quantidade que ocorrera a animação*/
+        animation-iteration-count: 1
+    }
+
+
+    .teste3:active{
+        /*cor ao clicar com mouse em cima do botão*/
+        background-color: #079200;
+        /*sombra do botão*/
+        box-shadow: none;
+        /*ajusta a posição diferente de  sua anterior*/
+        position: relative;
+        /*posiçãpo de cima do botão*/
+        /*ao clicar move para baixo o botão*/
+        top: 5px ;
+        /*delei até que a animação comece*/
+        transition-delay: -5s;
+    }
+
+         
+    /*cria animação para o objeto definido*/   
+    @keyframes teste4 {
+
+    	/* 'transform" é capaz de mover um elemento de acordo com as posições colocadas*/
+        0% {
+            transform: rotateX(0);
+        }
+
+        /* '180deg' significa que os graus */
+        50% {
+            transform: rotateY(180deg);
+        }
+        
+        100% {
+            transform: rotateX(0);
+        }
+    }   
+
+
+    .teste4{
+        /*permitem que você altere os valores das propriedades longo de um determinado período*/
+        transition: .2s;
+    }
+
+
+     /*hover ocorre ao passar o mouse em cima*/
+    .teste4:hover {
+        /*nome da classe que sera realizada a animação*/
+        animation-name: teste4;
+        /*delei até que a animação comece*/
+        animation-delay: 0.5s;
+        /*dução da anumação*/
+        animation-duration: 1s;
+        /*significa que a animação vai ocrrer de maneira linear, ou seja, vai se na mesma velocidade do inicio ao fim*/
+        animation-timing-function: linear;
+        /*é a quantidade que ocorrera a animação*/
+        animation-iteration-count: 1
+    }
+
+    .teste4:active{
+        /*cor ao clicar com mouse em cima do botão*/
+        background-color: #079200;
+        /*sombra do botão*/
+        box-shadow: none;
+        /*ajusta a posição diferente de  sua anterior*/
+        position: relative;
+        /*posiçãpo de cima do botão*/
+        /*ao clicar move para baixo o botão*/
+        top: 5px ;
+        /*delei até que a animação comece*/
+        transition-delay: -5s;
+
+    }
+
+    /*seve pra quando clicar o botao e chamar a imagens*/
+    div{ 
+
+       	/*para não repetir a imagem*/
+        background-repeat: no-repeat;
+
+        /*define se uma imagem de plano de fundo rola com o resto da página*/
+        background-attachment: fixed;
+
+        /*Serve para centralizar a imagem*/
+        background-position: center;
+
+       	/*largura*/
+       	width: 100%;
+       	/*altura*/
+       	height: 100%;
+       
+    }
+
+
+
+</style>
+
+<body>
+
+    <div class="texto">
+        <h1>Botões animados e lindas paisagens</h1>
+
+        <div id="botao1">            
+            <h3>Montanha<h3>
+
+            <button class="teste1"><span class="texto">Mostrar</span></button><br><br>
+
+        </div>
+
+        <div id="botao2">
+            <h3>Cidade</h3>
+
+            <button class="teste2"><span class="texto">Mostrar</span></button><br><br>
+
+        </div>
+
+        <div id="botao3">    
+            <H3>Floresta</H3>
+
+            <button class="teste3"><span class="texto">Mostrar</span></button><br><br>
+
+        </div>
+
+
+        <div id="botao4">
+            <h3>Deserto</h3>
+
+            <button class="teste4"><span class="texto">Mostrar</span></button><br><br>
+
+        </div>
+            
+    </div>
+
+        
+
+
+</body>
+
+<script>
+
+	/*variavei de cada um dos botões*/
+    var botão1 = document.querySelector(".teste1")
+    var botão2 = document.querySelector(".teste2")
+    var botão3 = document.querySelector(".teste3")
+    var botão4 = document.querySelector(".teste4")
+
+
+    function mudarDeCor1(){
+        if(botão1 = true){
+        
+        	/* retorna o elemento que possui o atributo ID com o valor especificado e chama uma imagem*/
+            document.getElementById("botao1").style.backgroundImage = "url('Montanha.png')";
+
+        }
+    }
+
+     function mudarDeCor2(){
+        if(botão2 = true){
+
+        	/* retorna o elemento que possui o atributo ID com o valor especificado e chama uma imagem*/
+        	document.getElementById("botao2").style.backgroundImage = "url('Cidade.png')";
+        }
+    }
+    function mudarDeCor3(){
+        if(botão3 = true){
+
+        	/* retorna o elemento que possui o atributo ID com o valor especificado e chama uma imagem*/
+            document.getElementById("botao3").style.backgroundImage = "url('Florestas.png')";
+        }
+    }
+    function mudarDeCor4(){
+        if(botão4 = true){
+
+        	/* retorna o elemento que possui o atributo ID com o valor especificado e chama uma imagem*/
+            document.getElementById("botao4").style.backgroundImage = "url('Deserto.png')";
+        }
+    }
+
+    /*ação que ocorre ao clicar um botão*/
+    botão1.onclick = mudarDeCor1
+    botão2.onclick = mudarDeCor2
+    botão3.onclick = mudarDeCor3
+    botão4.onclick = mudarDeCor4
+
+
+
+
+</script>
+
+
+
+
+</html>
